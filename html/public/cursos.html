@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/cursos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/./IMG-WEB/logo.png" alt="Foxus Academy Logo">
+            <span class="academy-name">Foxus Academy</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="planes_de_pago.html">Planes</a></li>
+                <li><a href="becas.html">Becas para Estudiantes</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+            </ul>
+        </nav>
+        <a href="logearse.html" class="login-btn">Iniciar Sesion</a>
+        <a href="registrar.html" class="login-btn">Registrar</a>
+
+        <div class="carrito-container">
+            <img src="/./car.svg" alt="Carrito de compras" class="carrito-icon">
+            <div class="carrito-dropdown">
+                <div class="carrito-header">
+                    <h2>Tu carrito de compras</h2>
+                </div>
+                <div class="carrito-items"></div> <!-- Aquí se insertarán los productos -->
+                <div class="carrito-total">
+                    <h3>Total: <span>$0 USD</span></h3>
+                </div>
+                <button class="btn-comprar">¡Completa tu compra!</button>
+                <button class="btn-vaciar">Vaciar carrito</button>
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="bloque1">
+        <div class="search-container">
+            <h1>Aprende algo nuevo</h1>
+            <p>Todos los dias</p>
+            <input type="text" id="search" placeholder="¿Qué te gustaría Aprender?" onkeyup="buscarCurso()">
+        </div>
+    </div>
+    
+    <section id="escuelas">
+        <h2>Descubre las escuelas</h2>
+        <div class="school-icons">
+            <a href="#" data-category="todo" class="icon-container">
+                <div class="icon-background"></div>
+                <img src="/./IMG-WEB/logo_3.png" alt="Todo">
+                <span>Todo</span>
+            </a>
+            <a href="#" data-category="desarrollo_web">
+                <img src="/./IMG-WEB/logo_1.png" alt="Desarrollo Web">
+                <span>Desarrollo <br> Web</span>
+            </a>
+            <a href="#" data-category="negocios">
+                <img src="/./IMG-WEB/logo_3.png" alt="Negocios">
+                <span>Negocios</span>
+            </a>
+            <a href="#" data-category="data_science">
+                <img src="/./IMG-WEB/logo_4.png" alt="Data Science">
+                <span>Data <br> Science</span>
+            </a>
+            <a href="#" data-category="transformacion_digital">
+                <img src="/./IMG-WEB/logo_5.png" alt="Transformación Digital">
+                <span>Transformación <br> Digital</span>
+            </a>
+            <a href="#" data-category="english_academy">
+                <img src="/./IMG-WEB/logo_6.png" alt="English Academy">
+                <span>English <br> Academy</span>
+            </a>
+            <a href="#" data-category="programacion">
+                <img src="/./IMG-WEB/logo_7.png" alt="Programación y Software">
+                <span>Programación y <br> Software</span>
+            </a>
+            <a href="#" data-category="marketing_digital">
+                <img src="/./IMG-WEB/logo_8.png" alt="Marketing Digital">
+                <span>Marketing <br> Digital</span>
+            </a>
+            <a href="#" data-category="talento">
+                <img src="/./IMG-WEB/logo_9.png" alt="Talento y Recursos">
+                <span>Talento y <br> Recursos</span>
+            </a>
+            <a href="#" data-category="liderazgo">
+                <img src="/./IMG-WEB/logo_10.png" alt="Liderazgo y Management">
+                <span>Liderazgo y <br> Management</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="course-section">
+        <h2>Cursos En Línea</h2>
+        <div id="course-list">
+            <div class="course" data-category="desarrollo_web" data-course-name="HTML5, CSS3, JavaScript para Principiantes">
+                <img src="/./img/curso1.jpg" alt="Curso de HTML5, CSS3, JavaScript">
+                <h3 class="curso-nombre"> <a href="temario.html">HTML5, CSS3, JavaScript para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="negocios" data-course-name="Curso de Comida Vegetariana">
+                <img src="/./img/curso2.jpg" alt="Curso de Comida Vegetariana">
+                <h3 class="curso-nombre"> <a href="temario.html">Curso de Comida Vegetariana</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐☆
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="musica" data-course-name="Guitarra para Principiantes">
+                <img src="/./img/curso3.jpg" alt="Curso de Guitarra para Principiantes">
+                <h3 class="curso-nombre"> <a href="temario.html">Guitarra para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="musica" data-course-name="Guitarra para Principiantes">
+                <img src="/./img/curso3.jpg" alt="Curso de Guitarra para Principiantes">
+                <h3 class="curso-nombre"> <a href="">Guitarra para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="musica" data-course-name="Guitarra para Principiantes">
+                <img src="/./img/curso3.jpg" alt="Curso de Guitarra para Principiantes">
+                <h3 class="curso-nombre"> <a href="">Guitarra para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="musica" data-course-name="Guitarra para Principiantes">
+                <img src="/./img/curso3.jpg" alt="Curso de Guitarra para Principiantes">
+                <h3 class="curso-nombre"> <a href="">Guitarra para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="musica" data-course-name="Guitarra para Principiantes">
+                <img src="/./img/curso3.jpg" alt="Curso de Guitarra para Principiantes">
+                <h3 class="curso-nombre"> <a href="">Guitarra para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="musica" data-course-name="Guitarra para Principiantes">
+                <img src="/./img/curso3.jpg" alt="Curso de Guitarra para Principiantes">
+                <h3 class="curso-nombre"> <a href="">Guitarra para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+
+            <div class="course" data-category="musica" data-course-name="Guitarra para Principiantes">
+                <img src="/./img/curso3.jpg" alt="Curso de Guitarra para Principiantes">
+                <h3 class="curso-nombre"> <a href="">Guitarra para Principiantes</a> </h3>
+                <p class="curso-profesor">Juan Pedro</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p class="curso-precio">
+                    Precio: <span class="precio-original"></span> 
+                    <span class="precio-descuento">$30 USD</span>
+                </p>
+                <button class="cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/js/cursos.js"></script>
+    
+
+</body>
+</html>

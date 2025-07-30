@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/css/perfil.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="main-container">
+        <div class="left-section">
+            <div class="profile-card">
+                <div class="avatar">
+                    <img src="/IMG-WEB/foto bb.png" alt="Foto de perfil" class="profile-image">
+                    <div class="badge">0</div>
+                </div>
+                <h2 class="user-name">EDUARDO ALFREDO<br>ARDILES ELIAS</h2>
+                <div class="username">@eduardoalfredoardileselias</div>
+                <button onclick="window.location.href='cambio-perfil.html'" class="edit-button">Editar perfil</button>
+            </div>
+            <div class="content-display" id="content-display">
+                <!-- Aquí se mostrarán los datos dinámicos -->
+                <p>Haz clic en una opción del menú para ver la información.</p>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="menu-items">
+                <div class="menu-item" onclick="showContent('subscription')">
+                    <span class="icon">💬</span>
+                    <span>Mi suscripción</span>
+                </div>
+                <div class="menu-item" onclick="showContent('certificates')">
+                    <span class="icon">🏆</span>
+                    <span>Certificados</span>
+                </div>
+                <div class="menu-item" onclick="showContent('likes')">
+                    <span class="icon">❤️</span>
+                    <span>Me gusta</span>
+                </div>
+                <div class="menu-item" onclick="showContent('referrals')">
+                    <span class="icon">👥</span>
+                    <span>Referidos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/perfil.js"></script>
+</body>
+</html>

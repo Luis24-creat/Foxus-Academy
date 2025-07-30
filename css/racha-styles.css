@@ -1,0 +1,341 @@
+/* Variables y reset */
+:root {
+    --primary-color: #2D88FF;
+    --secondary-color: #31A24C;
+    --background-color: #1A1B1E;
+    --surface-color: #242526;
+    --text-primary: #E4E6EB;
+    --text-secondary: #B0B3B8;
+    --accent-color: #FFD700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.streak-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header de racha */
+.streak-header {
+    background: linear-gradient(135deg, #2D88FF 0%, #1a1b1e 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.current-streak {
+    text-align: center;
+}
+
+.streak-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+.streak-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.fire-emoji {
+    font-size: 1.5rem;
+}
+
+.streak-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/*--------------------------------Estilos del calendario----------------------------*/
+.calendar-section {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: transparent;
+    padding: 0;
+}
+
+.calendar-wrapper {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Parte superior del calendario */
+.calendar-top {
+    background: #ff0000;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.calendar-rings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.ring {
+    width: 20px;
+    height: 8px;
+    background: #000;
+    border-radius: 0 0 10px 10px;
+    margin-top: -1px;
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.5rem;
+}
+
+.month-header h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.month-nav {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Cuerpo del calendario */
+.calendar-body {
+    background: #fff;
+    padding: 1rem;
+}
+
+.weekday-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #f0f0f0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.weekday {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.calendar-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-day.active {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.calendar-day.streak {
+    background-color: #31A24C;
+    color: #fff;
+}
+
+/* Días del fin de semana */
+.calendar-day:nth-child(7n+1) {
+    color: #ff0000; /* Domingo en rojo */
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .calendar-section {
+        max-width: 100%;
+        margin: 1rem;
+    }
+    
+    .month-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .calendar-day {
+        font-size: 0.9rem;
+    }
+}
+
+/*-------------------------------Sección de logros------------------------------*/
+.achievements-section {
+    background-color: var(--surface-color);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.achievement-card {
+    background: linear-gradient(145deg, #2a2b2d 0%, #1f2023 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    background-color: rgba(45, 136, 255, 0.1);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.achievement-info {
+    flex: 1;
+}
+
+.achievement-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.achievement-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* Popup de logro */
+.achievement-popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+}
+
+.achievement-popup.show {
+    bottom: 20px;
+}
+
+.popup-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.popup-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .calendar-section {
+        max-width: 320px;  /* Aún más pequeño en móviles */
+        padding: 1rem;
+    }
+
+    .calendar-day {
+        width: 25px;    /* Más pequeño en móviles */
+        height: 25px;
+        font-size: 0.8rem;
+    }
+
+    .weekday {
+        font-size: 0.7rem;
+    }
+}

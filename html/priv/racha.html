@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Racha</title>
+    <link rel="stylesheet" href="/css/racha-styles.css">
+</head>
+<body>
+    <div class="streak-container">
+        <!-- Header con información de racha -->
+        <header class="streak-header">
+            <div class="current-streak">
+                <div class="streak-number" id="streakCount">0</div>
+                <div class="streak-label">
+                    <span class="fire-emoji">🔥</span>
+                    <span>Días en racha</span>
+                </div>
+            </div>
+            <div class="streak-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="bestStreak">0</span>
+                    <span class="stat-label">Mejor racha</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalDays">0</span>
+                    <span class="stat-label">Total de días</span>
+                </div>
+            </div>
+        </header>
+
+                <!-- Sección del calendario -->
+        <section class="calendar-section">
+            <div class="calendar-wrapper">
+                <!-- Encabezado tipo agenda -->
+                <div class="calendar-top">
+                    <div class="calendar-rings">
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                    </div>
+                    <div class="month-header">
+                        <button id="prevMonth" class="month-nav">←</button>
+                        <h2 id="currentMonth">Octubre 2024</h2>
+                        <button id="nextMonth" class="month-nav">→</button>
+                    </div>
+                </div>
+                
+                <!-- Grid del calendario -->
+                <div class="calendar-body">
+                    <div class="weekday-header">
+                        <div class="weekday">DOM</div>
+                        <div class="weekday">LUN</div>
+                        <div class="weekday">MAR</div>
+                        <div class="weekday">MIÉ</div>
+                        <div class="weekday">JUE</div>
+                        <div class="weekday">VIE</div>
+                        <div class="weekday">SÁB</div>
+                    </div>
+                    <div id="calendarDays" class="calendar-days-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Sección del calendario -->
+        <!-- <section class="calendar-section">
+            <div class="calendar-header">
+                <button id="prevMonth" class="month-nav">←</button>
+                <h2 id="currentMonth">Octubre 2024</h2>
+                <button id="nextMonth" class="month-nav">→</button>
+            </div>
+            <div class="calendar-grid">
+                <div class="weekday">Dom</div>
+                <div class="weekday">Lun</div>
+                <div class="weekday">Mar</div>
+                <div class="weekday">Mié</div>
+                <div class="weekday">Jue</div>
+                <div class="weekday">Vie</div>
+                <div class="weekday">Sáb</div>
+                <div id="calendarDays"></div>
+            </div>
+        </section> -->
+
+        <!-- Sección de metas -->
+        <section class="achievements-section">
+            <h2 class="section-title">Metas de Racha</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-days="3">
+                    <div class="achievement-icon">🌱</div>
+                    <div class="achievement-info">
+                        <h3>Principiante</h3>
+                        <p>3 días consecutivos</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card" data-days="7">
+                    <div class="achievement-icon">🌟</div>
+                    <div class="achievement-info">
+                        <h3>Constante</h3>
+                        <p>7 días consecutivos</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card" data-days="15">
+                    <div class="achievement-icon">💪</div>
+                    <div class="achievement-info">
+                        <h3>Dedicado</h3>
+                        <p>15 días consecutivos</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card" data-days="30">
+                    <div class="achievement-icon">👑</div>
+                    <div class="achievement-info">
+                        <h3>Maestro</h3>
+                        <p>30 días consecutivos</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mensaje de logro -->
+        <div class="achievement-popup" id="achievementPopup">
+            <div class="popup-content">
+                <div class="popup-icon">🎉</div>
+                <h3>¡Felicitaciones!</h3>
+                <p id="achievementMessage"></p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/racha-script.js"></script>
+</body>
+</html>

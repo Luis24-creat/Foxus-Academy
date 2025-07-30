@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web</title>
+    <link rel="stylesheet" href="/css/styles-beca.css">
+</head>
+<body>
+    <section class="primer-bloque">
+        <div class="primer-contenido">
+            <h1>Sé el mejor de tu clase,<br> <span>estudiando en FOXUS ACADEMY</span></h1>
+            <p>Si eres estudiante de instituto, colegio o universidad, estudia en FOXUS ACADEMY con 50% de descuento.</p>
+            <button id="Postular">¡Postula YA!</button>
+        </div>
+        <div class="primer-imagen">
+            <img src="/./IMG-BECAS/chicos_saltando.jpg" alt="Estudiante saltando">
+        </div>
+    </section>
+    <div id="bloque-form">
+        <div class="formulario">
+            <span class="cerrar">&times;</span>
+            <h2>¡Postula a las becas GUIMARBOT!</h2>
+            <form>
+                <label for="nombre">NOMBRE:</label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+
+                <label for="email">EMAIL:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="numero">N° CELULAR</label>
+                <input type="text" id="numero" name="numero"><br><br>
+
+                <label for="pais">¿Cuál es tu país?</label>
+                <select id="pais" name="pais">
+                    <option value="mx">Perú</option>
+                    <option value="pe">México</option>
+                    <option value="cl">Chile</option>
+                </select><br><br>
+
+                <label for="documento">Sube tus documentos</label>
+                <div class="contenido-docu">
+                    <input type="file" id="documento" name="documento" class="documento">
+                    <label for="documento" class="diseño-docu">
+                        <img class="img-archivo" src="https://cdn-icons-png.flaticon.com/512/545/545666.png" alt="Ícono de archivo">
+                        Seleccionar archivo
+                    </label>
+                </div>
+
+                <button class="enviar">Enviar tu información</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="segundo-bloque">
+        <div class="segundo-contenido">
+            <h2>Complementa y refuerza <br> <span>tus estudios</span></h2>
+            <p>En el mundo laboral la universidad no basta, las empresas exigen habilidades extra y actualización constante. Estudia en FOXUS ACADEMY y asegura tu futuro laboral antes de terminar la universidad o incluso si estás en el colegio o instituto.</p>
+            <button id="ComoPostular">¿Cómo postular?</button>
+            <!-- Formulario que se abrirá al hacer clic en el botón "¿Cómo postular?" -->
+            <div id="bloque-form-postular" class="bloque-form">
+                <div class="formulario">
+                    <span class="cerrar-postular">&times;</span>
+                    <h2>¿Cómo postular las becas Foxus Academy?</h2>
+                    <p>Las becas Foxus Academy son un programa de ayuda social para estudiantes de colegio, institutos y universidades. Obtén un 50% de descuento en nuestros cursos. Solo pagas 6 meses y te regalamos el resto del año.</p>
+                    <p>Con la beca, puedes acceder a todos los cursos por un único pago de 180 USD a un precio especial para estudiantes.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="segunda-imagen">
+            <img src="/./IMG-BECAS/ilustracion.jpg" alt="Ilustración de estudiantes">
+        </div>
+    </section>
+
+    <script src="/js/script-beca.js"></script>
+
+</body>
+</html>

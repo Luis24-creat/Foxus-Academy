@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0a192f, #0f9b8e);
+    background-color: #1a1d21;
+    color: #ffffff;
+}
+
+
+/*----------------------------NAV---------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #0a0b10;
+    padding: 20px 50px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.academy-name {
+    font-size: 24px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #f1b24a;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #94d1e0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+/*----------------------------NAV CARRITO---------------------------*/
+
+.carrito-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carrito-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.carrito-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.carrito-container:hover .carrito-dropdown {
+    display: block;
+}
+
+.carrito-header {
+    margin-bottom: 20px;
+}
+
+.carrito-items {
+    margin-bottom: 20px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #263636;
+    padding-bottom: 10px;
+}
+
+.carrito-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.carrito-item .info {
+    flex: 1;
+    color: #f4f4f4;
+    line-height: 1.5;
+}
+
+.carrito-item .precio-original {
+    color: red;
+    text-decoration: line-through;
+}
+
+.carrito-item .precio-descuento {
+    color: #4caf50;
+}
+
+.carrito-total {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carrito-total span {
+    color: #4caf50;
+}
+
+.btn-comprar, .btn-vaciar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-comprar:hover, .btn-vaciar:hover {
+    background-color: #e6a600;
+}
+
+.btn-vaciar {
+    background-color: #ff5555;
+    color: white;
+}
+
+.btn-vaciar:hover {
+    background-color: #e44c4c;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/*----------------------------BLOQUE 1---------------------------*/
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.course-info {
+    flex: 2;
+    padding-right: 40px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #ffd700;
+}
+
+.reviews, .level {
+    margin-left: 10px;
+}
+
+.level {
+    background-color: #2c3e50;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.publish-date {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.description {
+    line-height: 1.6;
+}
+
+.cta {
+    margin-top: 20px;
+}
+
+.preview-btn, .start-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.preview-btn {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.start-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.instructor {
+    flex: 1;
+    text-align: center;
+}
+
+.instructor img {
+    width: 650px;
+}
+
+.instructor-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.instructor-title {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+/*---------------------TEMARIO-----------------------*/
+
+.temario {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left-panel {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #24282c;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #2c3035;
+    color: #ffffff;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-bar .search-icon {
+    padding: 10px;
+    background-color: #2c3035;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.module {
+    margin-bottom: 10px;
+    background-color: #24282c;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.module-header h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.toggle-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.module.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.free-tag {
+    background-color: #4caf50;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.duration {
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+.lessons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.module.expanded .lessons {
+    max-height: 1000px; /* Ajusta este valor según sea necesario */
+}
+
+.lessons li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-top: 1px solid #2c3035;
+}
+
+.module.expanded .module-content {
+    max-height: 1000px; /* Ajusta este valor según sea necesario */
+    padding: 15px;
+}
+
+.target-audience, .prerequisites {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- link del github, para los iconos -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/> 
+    <link rel="stylesheet" href="/css/colores.css">
+    <link rel="stylesheet" href="/css/pago.css">
+    <title>Metodo de pago</title>
+</head>
+<body>
+    <!-- inicio de pago -->
+    <section class="seccion_pago">
+        <div class="container">
+            <div class="envoltorio_pago">
+                <div class="pago_izquierda">
+                    <div class="pago_emcabezado">
+                        <!-- icono de rayo -->
+                        <div class="pago_emcabezado_icono"><i class="ri-flashlight-fill"></i></div>
+                        <div class="pago_emcabezado_titulo">Orden del pedido</div>
+                        <div class="pago_emcabezado_descripcion">lorem ipsum dolor sit amet consectetur adipisicing</div>
+                    </div>
+                    <div class="contenido_pago">
+                        <div class="pago_body">
+                            <div class="pago_plan">
+                                <div class="pago_plan_tipo">Sub</div>
+                                <div class="pago_plan_info">
+                                    <div class="pago_plan_info_name">Plan Anual - 1 persona</div>
+                                    <div class="pago_plan_info_precio">$49 por año</div>
+                                </div>
+                                <a href="#" class="pago_plan_cambio">Cambio</a>
+                            </div>
+                            <div class="pago_resumen">
+                                <div class="pago_resumen_item">
+                                    <div class="pago_resumen_name">tarifa adicional</div>
+                                    <div class="pago_resumen_precio">$10</div>
+                                </div>
+                                <div class="pago_resumen_item">
+                                    <div class="pago_resumen_name">Descuento 20%</div>
+                                    <div class="pago_resumen_item_precio">-$10</div>
+                                </div>
+                                <div class="pago_resumen_divisor"></div>
+                                <div class="pago_resumen_item pago_resumen_total">
+                                    <div class="pago_resumen_name">Total</div>
+                                    <div class="pago_resumen_precio">-$10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pago_derecho">
+                    <form action="" class="pago_forma">
+                        <h1 class="pago_titulo">Detalles de Pago</h1>
+                        <div class="pago_metodo">
+                            <input type='radio' name="pago_metodo" id="metodo_1" checked>
+                            <label for="metodo_1" class="pago_metodo_item">
+                                <img src="/./img_pago/visa.png" alt="">
+                            </label>
+                            <input type='radio' name="pago_metodo" id="metodo_2">
+                            <label for="metodo_2" class="pago_metodo_item">
+                                <img src="/./img_pago/mastercard.png" alt="">
+                            </label>
+                            <input type='radio' name="pago_metodo" id="metodo_3">
+                            <label for="metodo_3" class="pago_metodo_item">
+                                <img src="/./img_pago/paypal.png" alt="">
+                            </label>
+                            <input type='radio' name="pago_metodo" id="metodo_4">
+                            <label for="metodo_4" class="pago_metodo_item">
+                                <img src="/./img_pago/yape.jpeg" alt="">
+                            </label>
+                        </div>
+                        <div class="pago_forma_grupo">
+                            <input type="email" placeholder="" class="pago_forma_control" id="email">
+                            <label for="card_numero" class="pago_forma_label pago_forma_label_required">Email</label>
+                        </div>
+                        <div class="pago_forma_grupo">
+                            <input type="text" placeholder="" class="pago_forma_control" id="card_numero">
+                            <label for="card_numero" class="pago_forma_label pago_forma_label_required">Numero Tarjeta</label>
+                        </div>
+                        <div class="pago_forma_grupo_flex">
+                            <div class="pago_forma_grupo">
+                                <input type="date" placeholder="" class="pago_forma_control" id="fecha_caducacion">
+                                <label for="fecha_caducacion" class="pago_forma_label pago_forma_label_required">Fecha Caducidad</label>
+                            </div>
+                            <div class="pago_forma_grupo">
+                                <input type="text" placeholder="" class="pago_forma_control" id="cvv">
+                                <label for="cvv" class="pago_forma_label pago_forma_label_required">CVV</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="pago_forma_submit_button"><i class="ri-wallet-line"></i>Pagar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- final de pago -->
+</body>
+</html>

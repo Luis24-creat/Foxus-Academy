@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foxus Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/./IMG-WEB/logo.png" alt="Foxus Academy Logo">
+            <span class="academy-name">Foxus Academy</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="planes.html">Planes</a></li>
+                <li><a href="becas.html">Becas para Estudiantes</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+            </ul>
+        </nav>
+        <a href="logearse.html" class="login-btn">Iniciar Sesion</a>
+        <a href="registrar.html" class="login-btn">Registrar</a>
+
+        <div class="carrito-container">
+            <img src="/./car.svg" alt="Carrito de compras" class="carrito-icon">
+            <div class="carrito-dropdown">
+                <div class="carrito-header">
+                    <h2>Tu carrito de compras</h2>
+                </div>
+                <div class="carrito-items"></div> <!-- Aquí se insertarán los productos -->
+                <div class="carrito-total">
+                    <h3>Total: <span>$0 USD</span></h3>
+                </div>
+                <button class="btn-comprar">¡Completa tu compra!</button>
+                <button class="btn-vaciar">Vaciar carrito</button>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="character">
+                <img src="/./IMG-WEB/mascota.png" alt="Foxus Character">
+            </div>
+            <div class="title">
+                <p>Aprende con</p>
+                <h1>FOXUS</h1>
+                <p>Academy</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <section class="servicios">
+        <h2 class="servicios-titulo">Nuestros Servicios</h2>
+        
+        <div class="separator">
+            <div class="line"></div>
+            <div class="dot"></div>
+            <div class="line"></div>
+        </div>
+
+        <p class="servicios-descripcion">
+            Aprovecha la oportunidad de ampliar tus conocimientos con nuestros cursos especializados. Desde HTML y CSS hasta JavaScript y más, nuestra plataforma te ofrece todo lo que necesitas para convertirte en un experto. Explora la variedad de cursos que tenemos para ti y empieza a construir el futuro que deseas. ¡Descubre más y comienza a aprender con nosotros hoy mismo!
+        </p>
+
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="servicio-content">
+                    <h3>HTML</h3>
+                    <p>Descubre los fundamentos de la web con HTML. Aprende a estructurar tus páginas desde cero y conviértete en el creador de experiencias visuales que atrapan a tus visitantes.</p>
+                    <a href="cursos.html" class="leer-mas">VER MÁS <span class="flecha">›</span></a>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-content">
+                    <h3>CSS</h3>
+                    <p>Domina el diseño visual con CSS. Conviértete en un experto en darle estilo y personalidad a tus proyectos web, creando sitios atractivos y profesionales.</p>
+                    <a href="cursos.html" class="leer-mas">VER MÁS <span class="flecha">›</span></a>
+                </div>
+            </div>
+
+            <div class="servicio-card">
+                <div class="servicio-content">
+                    <h3>JAVASRIPT</h3>
+                    <p>Lleva tus sitios al siguiente nivel con JavaScript. Aprende a agregar interactividad y crear aplicaciones dinámicas para mejorar la experiencia de usuario.</p>
+                    <a href="cursos.html" class="leer-mas">VER MÁS <span class="flecha">›</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="bloque-3">
+
+        <div class="bloque-3-titulo">
+            <h1>Planes de Suscripción Profesional</h1>
+            <p>Invierte en tu futuro con nuestros planes flexibles</p>
+        </div>
+        
+        <div class="pricing-container">
+            <!-- Plan Individual -->
+            <div class="pricing-card">
+                <h2 class="plan-name">Plan Individual</h2>
+                <div class="price">S/ 250/año</div>
+                <ul class="features">
+                    <li>Acceso a contenido profesional</li>
+                    <li>Certificados digitales</li>
+                    <li>Soporte 24/7</li>
+                    <li>Eventos y webinars exclusivos</li>
+                </ul>
+                <button class="subscribe-btn">Suscríbete para 1 persona</button>
+            </div>
+    
+            <!-- Plan Duo -->
+            <div class="pricing-card">
+                <h2 class="plan-name">Plan Duo</h2>
+                <div class="price">S/ 450/año</div>
+                <div class="discount">Ahorro de S/ 50</div>
+                <ul class="features">
+                    <li>Acceso a contenido profesional</li>
+                    <li>Certificados digitales</li>
+                    <li>Soporte 24/7</li>
+                    <li>Eventos y webinars exclusivos</li>
+                </ul>
+                <button class="subscribe-btn">Suscríbete para 2 personas</button>
+            </div>
+    
+            <!-- Plan Grupo -->
+            <div class="pricing-card">
+                <h2 class="plan-name">Plan Grupo</h2>
+                <div class="price">S/ 900/año</div>
+                <div class="discount">Ahorro de S/ 100</div>
+                <ul class="features">
+                    <li>Acceso a contenido profesional</li>
+                    <li>Certificados digitales</li>
+                    <li>Soporte 24/7</li>
+                    <li>Eventos y webinars exclusivos</li>
+                </ul>
+                <button class="subscribe-btn">Suscríbete para 4 personas</button>
+            </div>
+        </div>
+    
+        <p class="footer-note">Nunca subiremos el precio si mantienes tu suscripción activa</p>
+    </div>
+
+
+    <footer class="footer">
+        <div>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-tiktok"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+    
+        <p>Foxus Academy | Copyrigth 2024</p>
+    </footer>
+
+    <script src="web.js"></script>
+
+</body>
+</html>

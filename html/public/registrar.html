@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="/css/registrar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register-box">
+            <div class="logo-container">
+                <img src="/./IMG-WEB/logo1.png"Logo de la empresa" class="logo">
+            </div>
+            <h2>Crear una cuenta</h2>
+            <form action="procesar-registro.php" method="POST" class="register-form">
+                <div class="name-fields">
+                    <input type="text" id="first-name" name="first-name" placeholder="Nombre" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="Apellido" required>
+                </div>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" name="password" placeholder="Nueva contraseña" required>
+
+                <label for="birthdate">Fecha de nacimiento</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <label for="gender">Género</label>
+                <div class="gender-fields">
+                    <label><input type="radio" name="gender" value="male" required> Hombre</label>
+                    <label><input type="radio" name="gender" value="female" required> Mujer</label>
+                </div>
+
+                <button type="submit" class="register-btn">Registrarse</button>
+            </form>
+            <div class="login-link">
+                ¿Ya tienes una cuenta? <a href="logearse.html">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/registro.js"></script>
+</body>
+</html>

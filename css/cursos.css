@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(173,173,173);
+    background: linear-gradient(90deg, rgba(173,173,173,1) 35%, rgba(255,255,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #0a0b10;
+    padding: 20px 50px;
+    color: white;
+}
+
+/*----------------------------NAV---------------------------*/
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.academy-name {
+    font-size: 24px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #f1b24a;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: #062931;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Transición suave */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+}
+
+.login-btn:hover {
+    background-color: #07424d; /* Nuevo color al pasar el mouse */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Sombra ligeramente más grande */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+/*----------------------------NAV CARRITO---------------------------*/
+
+.carrito-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.carrito-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.carrito-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.carrito-container:hover .carrito-dropdown {
+    display: block;
+}
+
+.carrito-header {
+    margin-bottom: 20px;
+}
+
+.carrito-items {
+    margin-bottom: 20px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #263636;
+    padding-bottom: 10px;
+}
+
+.carrito-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.carrito-item .info {
+    flex: 1;
+    color: #f4f4f4;
+    line-height: 1.5;
+}
+
+.carrito-item .precio-original {
+    color: red;
+    text-decoration: line-through;
+}
+
+.carrito-item .precio-descuento {
+    color: #4caf50;
+}
+
+.carrito-total {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carrito-total span {
+    color: #4caf50;
+}
+
+.btn-comprar, .btn-vaciar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-comprar:hover, .btn-vaciar:hover {
+    background-color: #e6a600;
+}
+
+.btn-vaciar {
+    background-color: #ff5555;
+    color: white;
+}
+
+.btn-vaciar:hover {
+    background-color: #e44c4c;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/*----------------------------BLOQUE 1---------------------------*/
+
+.bloque1 {
+    background-image: url('/./img/hero.jpg'); /* Usa tu imagen aquí */
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    text-align: center;
+    color: white;
+}
+
+.search-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.search-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/*----------------------------RUTAS---------------------------*/
+#escuelas {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.school-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.icon-background {
+    width: 50px; /* Tamaño del fondo */
+    height: 50px; /* Mantiene la altura igual que el ancho para ser circular */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    background-color: #151422; /* Color de fondo específico, puedes cambiarlo dinámicamente si deseas */
+    position: absolute; /* Para superponerlo sobre la imagen */
+}
+
+.icon-container img {
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+    position: relative; /* Para que esté en un nivel superior */
+    transition: transform 0.3s; /* Efecto de zoom al pasar el ratón */
+}
+
+.school-icons a {
+    text-decoration: none;
+    text-align: center; /* Centra el texto debajo de la imagen */
+    margin-top: 40px;
+}
+
+.school-icons img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: 50px; /* Mantiene la altura igual que el ancho para ser circular */
+    border-radius: 50%; /* Hace que el logo sea circular */
+    border: 2px solid #333; /* Añade un borde alrededor del logo, ajusta el color y grosor según desees */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien dentro del círculo */
+
+}
+
+.school-icons img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+.school-icons span {
+    display: block; /* Hace que el nombre aparezca en una nueva línea */
+    margin-top: 8px; /* Espacio entre la imagen y el texto */
+    font-weight: bold; /* Hacer que el texto sea más prominente */
+    color: #333; /* Cambia el color del texto según tu diseño */
+    font-size: 12px;
+}
+
+/*----------------------------CURSOS---------------------------*/
+
+#course-section {
+    margin: 50px;
+    text-align: center;
+}
+
+#course-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.course {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.course img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.course h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.course p {
+    color: #777;
+    margin: 5px 0;
+}
+
+.rating {
+    margin: 10px 0;
+}
+
+.cart-button {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+    background-color: #008cba;
+}
+

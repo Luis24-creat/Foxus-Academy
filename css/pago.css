@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* inicio - Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body{
+    font-family: 'inter', sans-serif;
+    color: var(--gray-900);
+    background-color: var(--gray-400);
+}
+
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+/* fin - global */
+
+/* inicio - pago */
+.seccion_pago{
+    padding: 48px 0;
+}
+
+/* Modifica las letras en general */
+.envoltorio_pago{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* creacion y modificacion del cuadro donde va el orden del pedido */
+.pago_emcabezado{
+    padding: 24px;
+    background-color: var(--indigo-500);
+    border-radius: 12px;
+    padding-bottom: 72px;
+}
+
+/* Modificacion del icono "el rayito" */
+.pago_emcabezado_icono{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--indigo-600);
+    color: var(--white);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.pago_emcabezado_titulo{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+/* modifica el tamaño y color de la letra que esta debajo del orden del pedido */
+.pago_emcabezado_descripcion{
+    font-size: 15px;
+    color: var(--gray-200);
+    line-height: 1.5;
+}
+
+/* tamaño del cuadro donde va el pro, plan, etc */
+.contenido_pago{
+    padding: 24px;
+    margin-top: -64px;
+    position: relative;
+}
+
+.contenido_pago::before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    height: 16px;
+    border-radius: 4px;
+    background-color: var(--indigo-600);
+}
+
+/* editacion del cuadro el borde, y la sombra */
+.pago_body{
+    background-color: var(--white);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .05), inset 0 8px 0 rgba(0, 0, 0, .05);
+    position: relative;
+    padding-top: 8px;
+    overflow: hidden;
+}
+
+/* mueve al tipo de plan, pro, precio y cambio */
+.pago_plan{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+/* modifica solo el tipo de plan  */
+.pago_plan_tipo{
+    width: 40px;
+    height: 40px;
+    background-color: var(--indigo-500);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* Modifica solo el nombre del plan y precio */
+.pago_plan_info{
+    width: 100%;
+    margin-right: 8px;
+    display: grid;
+}
+
+/* Modifica solo el nomnbre del plan */
+.pago_plan_info_name{
+    font-size: 13px;
+    color: var(--gray-400);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Modifica solo el precio del plan */
+.pago_plan_info_precio{
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* el boton para cambiar  */
+.pago_plan_cambio{
+    color: var(--blue-500);
+    font-size: 12px;
+    font-weight: 600;
+    text-underline-offset: 2px;
+}
+
+.pago_plan_cambio:hover{
+    color: var(--blue-600);
+}
+
+/* Edita la parte de tarifa y descuento, y monto que sale como "$10" */
+.pago_resumen_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+}
+
+.pago_resumen_name{
+    font-size: 14px;
+    color: var(--gray-500);
+}
+
+.pago_resumen_precio{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.pago_resumen_divisor{
+    width: calc(100% - 16px);
+    height: 0;
+    margin: 16px auto;
+    /* Crea los puntitos que divide en el total */
+    border-bottom: 1px dashed var(--gray-200);
+    position: relative;
+}
+
+.pago_resumen_divisor::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--gray-50);
+    box-shadow: inset 0 2px 16px rgba(0, 0, 0, .05);
+}
+
+.pago_resumen_divisor::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--gray-50);
+    box-shadow: inset 0 2px 16px rgba(0, 0, 0, .05);
+}
+
+.pago_resumen_total{
+    padding-bottom: 16px;
+}
+
+.pago_resumen_total .pago_resumen_name{
+    color: var(--gray-900);
+}
+
+/* editacion del precio total */
+.pago_resumen_total .pago_resumen_precio{
+    font-size: 16px;
+    color: var(--indigo-500);
+    font-weight: 600;
+}
+
+.pago_derecho{
+    min-width: 0;
+}
+
+/* ---------------METODO DE PAGO------------------ */
+/* Cuador blanco del metodo de pago */
+.pago_forma{
+    padding: 24px;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .05);
+}
+
+/* titulo en el apartado de metodo de pago */
+.pago_titulo{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+/* acomoda los iconos */
+.pago_metodo{
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    padding: 6px 0;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+/* desaparece los puntos de seleccion */
+.pago_metodo input{
+    display: none;
+}
+
+/* Creacion de los cuadros en donde estaran los iconos */
+.pago_metodo_item{
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* cambia el color del borde del cuadro que este seleccionado */
+input:checked + .pago_metodo_item{
+    border-color: var(--indigo-500);
+}
+
+/* crea el circulo que sale en la parte de arriba de cuando esta seleccionado el cuadro */
+input:checked + .pago_metodo_item::before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--indigo-500);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0icmdiYSgyNDgsMjQ4LDI0OCwxKSI+PHBhdGggZD0iTTkuOTk5NyAxNS4xNzA5TDE5LjE5MjEgNS45Nzg1MkwyMC42MDYzIDcuMzkyNzNMOS45OTk3IDE3Ljk5OTNMMy42MzU3NCAxMS42MzU0TDUuMDQ5OTYgMTAuMjIxMkw5Ljk5OTcgMTUuMTcwOVoiPjwvcGF0aD48L3N2Zz4=");
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* acomoda el icono de pago, dentro del cuadro */
+.pago_metodo_item > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pago_forma_grupo{
+    position: relative;
+    margin-bottom: 16px;
+}
+
+/* el cuadro donde va el numero de tarjeta */
+.pago_forma_control{
+    outline: transparent;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 24px 16px 8px 16px;
+    width: 100%;
+    /* lo que hace este que al momento de selecionar el cuadro donde ira el numero de tarjeta, hace que dentro de un la tiempo se sombre el cuadro segun el color puesto*/
+    transition: all .15s ease-in-out;
+}
+
+/* la parte donde dice numero de tarjeta */
+.pago_forma_label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    color: var(--gray-400);
+    pointer-events: none;
+    /* le da el movimiento a "numero tarjeta" */
+    transition: all .1s ease-in-out;
+}
+
+.pago_forma_control:focus{
+    outline: 1px solid var(--indigo-500);
+    border-color: var(--indigo-500);
+}
+
+/* y este lo que hacer que con tan solo dar click dentro del cuadro, la palabra "numero tarjeta" se suba para arriba */
+.pago_forma_control:focus + .pago_forma_label,
+
+/* lo que hace esta parte es que cuando se escribe en el cuadro donde se escribe la tarjeta la palabra "numero tarjeta" suba para arriba y se coloque en medio lo que estas escribiendo */
+.pago_forma_control:not(:placeholder-shown) + .pago_forma_label{
+    top: 30%;
+    font-size: 12px;
+}
+
+/* color el * al costado de la palabra */
+.pago_forma_label_required::after {
+    content: ' *';
+    color: var(--red-500);
+}
+
+/* ------------ inicio ---- fecha y cvv ----------- */
+/* hace que el cuadro de cvv y el cuadro de fecha se ponga al costado del otro */
+.pago_forma_grupo_flex{
+    display: flex;
+    align-items: center;
+}
+
+.pago_forma_grupo_flex > *{
+    width: 100%;
+}
+
+/* separa un poco los cuadros */
+.pago_forma_grupo_flex > :not(:last-child){
+    margin-right: 12px;
+}
+/* ------------ fin ---- fecha y cvv ----------- */
+
+.pago_forma_submit_button{
+    background-color: var(--indigo-500);
+    border-radius: 8px;
+    outline: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 600;
+    padding: 16px;
+    transition: all .15s ease-in-out;
+}
+
+/* hace que cuando el puntero se acerque al boton se sombree */
+.pago_forma_submit_button:hover{
+    background-color: var(--indigo-600);
+}
+
+.pago_forma_submit_button > i {
+    margin-right: 8px;
+}
+
+/* fin - pago */
+
+/* inicio - puntos de interrupcion */
+
+/* para la parte movil, baja para abajo */
+@media screen and (max-width: 767px) {
+    .envoltorio_pago{
+     grid-template-columns: 1fr;   
+    }
+    
+    .contenido_pago {
+        padding: 16px;
+    }
+
+    .contenido_pago::before{
+        top: 16px;
+        width: calc(100% - 28px);
+    }
+
+    .pago_forma_grupo_flex{
+        display: block;
+    }
+}
+
+/* fin - puntos de interrupcion */
