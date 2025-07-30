@@ -1,2 +1,1 @@
-# Nexus-academia
-Nexus/academia
+Foxus Academy
